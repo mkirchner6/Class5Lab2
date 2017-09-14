@@ -10,12 +10,18 @@ package task3;
  * @author mattkirchner
  */
 public class ChevyImpala implements Car{
+    private int numberOfWheels;
     private String manufacturerId;
     private String ownerName;
 
     @Override
     public void move() {
         System.out.println("Vehicle has moved");
+    }
+    
+    @Override
+    public void putInDrive(){
+        System.out.println("Car is in drive");
     }
 
     @Override
@@ -42,6 +48,19 @@ public class ChevyImpala implements Car{
             throw new IllegalArgumentException("This is manditory");
         }
         this.ownerName = ownerName;
+    }
+
+    @Override
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    @Override
+    public void setNumberOfWheels(int numberOfWheels) {
+        if(numberOfWheels < 0){
+            throw new IllegalArgumentException("Must have Wheels!!!");
+        }
+        this.numberOfWheels = numberOfWheels;
     }
     
 }

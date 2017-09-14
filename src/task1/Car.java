@@ -10,5 +10,20 @@ package task1;
  * @author mattkirchner
  */
 public class Car extends Vehicle{
+    private int numberOfWheels;
+
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    public void setNumberOfWheels(int numberOfWheels) {
+        if(numberOfWheels < 0){
+            throw new IllegalArgumentException("Must have Wheels!!!");
+        }
+        this.numberOfWheels = numberOfWheels;
+    }
     
+    public void putInDrive(){
+        System.out.println("Car is in drive");
+    }
 }

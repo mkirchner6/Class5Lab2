@@ -10,5 +10,5 @@ package task2;
  * @author mattkirchner
  */
 public abstract class Car extends Vehicle{
-    
+    public abstract void move();
 }
